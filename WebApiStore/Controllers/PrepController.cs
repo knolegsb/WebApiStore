@@ -29,6 +29,12 @@ namespace WebApiStore.Controllers
             return RedirectToAction("Index");
         }
 
+        public async Task<ActionResult> SaveProduct(Product product)
+        {
+            await repo.SaveProductAsync(product);
+            return RedirectToAction("Index");
+        }
+
         public ActionResult Orders()
         {
             return View(repo.Orders);
