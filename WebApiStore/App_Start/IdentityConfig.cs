@@ -7,6 +7,7 @@ using System.Web;
 using WebApiStore.Infrastructure.Identity;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity;
+using Microsoft.Owin.Security.OAuth;
 
 [assembly: OwinStartup(typeof(WebApiStore.IdentityConfig))]
 namespace WebApiStore
@@ -23,6 +24,13 @@ namespace WebApiStore
             //{
             //    AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie
             //});
+
+            app.UseOAuthBearerTokens(new OAuthAuthorizationServerOptions
+            {
+                Provider = new StoreAuthProvider(),
+                AllowInsecureHttp = true,
+                TokenEndpointPath = new PathString("/Authenticate")
+            });
         }
     }
 }
