@@ -12,10 +12,16 @@ namespace WebApiStore.Controllers
     public class ProductsController : ApiController
     {
         private IRepository Repository { get; set; }
+
         public ProductsController()
         {
-            Repository = new ProductRepository();
+            Repository = (IRepository)GlobalConfiguration.Configuration.DependencyResolver.GetService(typeof(IRepository));
         }
+       
+        //public ProductsController()
+        //{
+        //    Repository = new ProductRepository();
+        //}
 
         public IEnumerable<Product> GetProducts()
         {

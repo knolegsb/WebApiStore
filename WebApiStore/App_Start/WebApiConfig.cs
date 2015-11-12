@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApiStore.Infrastructure;
 
 namespace WebApiStore
 {
@@ -21,6 +22,7 @@ namespace WebApiStore
             );
 
             config.Formatters.Remove(config.Formatters.XmlFormatter);
+            config.DependencyResolver = new CustomResolver();
         }
     }
 }
