@@ -3,6 +3,12 @@
 @*<link href="~/Content/bootstrap.css" rel="stylesheet" />*@
 
 <div class="panel panel-primary">
+    <a href="/prep/signin" class="btn btn-sm btn-primary">Sign In</a>
+    <a href="/prep/signout" class="btn btn-sm btn-primary">Sign Out</a>
+    User: @(HttpContext.Current.User.Identity.Name)
+</div>
+
+<div class="panel panel-primary">
     <div class="panel-heading">Product</div>
     <table class="table table-striped">
         <tr>
