@@ -180,6 +180,16 @@
     <Content Include="Scripts\knockout-2.0.0.js" />
     <Content Include="Scripts\knockout-delegatedEvents.js" />
     <Content Include="Scripts\knockout-delegatedEvents.min.js" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Scripts\storeAdminController.js" />
+    <Content Include="Scripts\storeAdminModel.js" />
+    <Content Include="Scripts\storeAjax.js" />
+    <Content Include="Scripts\storeCommonController.js" />
+    <Content Include="Scripts\storeCustomerController.js" />
+    <Content Include="Scripts\storeCustomerModel.js" />
+    <Content Include="Scripts\storeModel.js" />
+    <Content Include="Scripts\storeOrdersController.js" />
+    <Content Include="Scripts\storeProductsController.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Prep\Index.cshtml" />
@@ -190,6 +200,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\PrepController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
@@ -217,6 +228,7 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <Content Include="Views\Home\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

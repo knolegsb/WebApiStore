@@ -52,6 +52,7 @@ namespace WebApiStore.Controllers
         //    await Repository.SaveProductAsync(product);
         //}
 
+        [Authorize(Roles = "Administrators")]
         public async Task<IHttpActionResult> PostProduct(Product product)
         {
             if (ModelState.IsValid)
