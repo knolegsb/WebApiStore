@@ -10,7 +10,7 @@
 
 $(document).ready(function () {
     ko.applyBindings();
-    serDefaultCallbacks(function (data) {
+    setDefaultCallbacks(function (data) {
         if (data) {
             console.log("---Begin Success---");
             console.log(JSON.stringify(data));
